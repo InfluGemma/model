@@ -10,19 +10,21 @@ else:
 
 peft_config = LoraConfig(
     r=16,
-    lora_alpha=16,
+    lora_alpha=32,
     lora_dropout=0.05,
     bias="none",
-    target_modules="all-linear",
-    task_type="CAUSAL_LM"
+    task_type="CAUSAL_LM",
+    target_modules=[
+        "q_proj","k_proj","v_proj","o_proj",
+        "gate_proj","up_proj","down_proj",
+    ]
 )
 
 args = SFTConfig(
-    output_dir="", # ADD DIR
-    max_seq_length=512,
-    packing=True,
+    output_dir="/srv/scratch/z5397970/output",
+    packing=False,
     num_train_epochs=3,
-        per_device_train_batch_size=1,          # batch size per device during training
+    per_device_train_batch_size=4,          # batch size per device during training
     gradient_accumulation_steps=4,          # number of steps before performing a backward/update pass
     gradient_checkpointing=True,            # use gradient checkpointing to save memory
     optim="adamw_torch_fused",              # use fused adamw optimizer
@@ -33,7 +35,8 @@ args = SFTConfig(
     bf16=True if torch_dtype == torch.bfloat16 else False,   # use bfloat16 precision
     max_grad_norm=0.3,                      # max gradient norm based on QLoRA paper
     warmup_ratio=0.03,                      # warmup ratio based on QLoRA paper
-    lr_scheduler_type="constant",           # use constant learning rate scheduler
+    lr_scheduler_type="constant",           # use constant learning rate schedul
+    dataset_text_field="prompt",
     dataset_kwargs={
         "add_special_tokens": False, # We template with special tokens
         "append_concat_token": True, # Add EOS token as separator token between examples
