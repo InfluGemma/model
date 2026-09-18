@@ -1,6 +1,7 @@
 import torch
 from peft import LoraConfig
 from trl import SFTConfig
+from transformers import Seq2SeqTrainingArguments
 
 # Check if GPU benefits from bfloat16
 if torch.cuda.get_device_capability()[0] >= 8:
@@ -14,31 +15,53 @@ peft_config = LoraConfig(
     lora_dropout=0.05,
     bias="none",
     task_type="CAUSAL_LM",
-    target_modules=[
-        "q_proj","k_proj","v_proj","o_proj",
-        "gate_proj","up_proj","down_proj",
-    ]
+    target_modules=["q_proj", "k_proj","v_proj", "o_project", "gate_proj", "up_proj", "down_proj"],
 )
 
-args = SFTConfig(
+sft_args = SFTConfig(
     output_dir="/srv/scratch/z5397970/output",
     packing=False,
+    fp16=True,
+    bf16=False,
+   # tf32=False,
+    remove_unused_columns=False,
     num_train_epochs=3,
     per_device_train_batch_size=4,          # batch size per device during training
     gradient_accumulation_steps=4,          # number of steps before performing a backward/update pass
     gradient_checkpointing=True,            # use gradient checkpointing to save memory
+    gradient_checkpointing_kwargs={"use_reentrant":False},
     optim="adamw_torch_fused",              # use fused adamw optimizer
-    logging_steps=10,                       # log every 10 steps
+    logging_steps=5,                       # log every 10 steps
     save_strategy="epoch",                  # save checkpoint every epoch
-    learning_rate=2e-4,                     # learning rate, based on QLoRA paper
-    fp16=True if torch_dtype == torch.float16 else False,   # use float16 precision
-    bf16=True if torch_dtype == torch.bfloat16 else False,   # use bfloat16 precision
+    learning_rate=2e-5,                     # learning rate, based on QLoRA paper
+   # fp16=True if dtype == torch.float16 else False,   # use float16 precision
+   # bf16=True if dtype == torch.bfloat16 else False,   # use bfloat16 precision
     max_grad_norm=0.3,                      # max gradient norm based on QLoRA paper
     warmup_ratio=0.03,                      # warmup ratio based on QLoRA paper
     lr_scheduler_type="constant",           # use constant learning rate schedul
-    dataset_text_field="prompt",
+    dataloader_pin_memory=False,
+    dataset_text_field=None,
     dataset_kwargs={
+        "skip_prepare_dataset": True,
         "add_special_tokens": False, # We template with special tokens
         "append_concat_token": True, # Add EOS token as separator token between examples
     }
+)
+
+s2s_args = Seq2SeqTrainingArguments(
+    output_dir="/srv/scratch/z5397970/output",
+    fp16=True,
+    bf16=False,
+   # tf32=False,
+    remove_unused_columns=False,
+    num_train_epochs=4,
+    per_device_train_batch_size=2,          # batch size per device during training
+    save_strategy="epoch",                  # save checkpoint every epoch
+    learning_rate=2e-5,                     # learning rate, based on QLoRA paper
+   # fp16=True if dtype == torch.float16 else False,   # use float16 precision
+   # bf16=True if dtype == torch.bfloat16 else False,   # use bfloat16 precision
+    max_grad_norm=0.3,                      # max gradient norm based on QLoRA paper
+    warmup_ratio=0.03,                      # warmup ratio based on QLoRA paper
+    lr_scheduler_type="constant",           # use constant learning rate schedul
+    dataloader_pin_memory=False,
 )

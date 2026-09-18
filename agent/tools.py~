@@ -1,0 +1,122 @@
+from langchain.tools import Tool
+import torch
+from datetime import date
+from datebase_update import get_state, get_fortnight_surv, get_trend, get_post_perc, add_post_perc, get_region, get_state_demo, get_many_surv, get_vaccination
+from sarima import sarima_forecast
+from posts import gather_posts
+from classify_posts import classify_flu_posts
+from rnn import FluRNN, FluRNNEncoder
+
+encoder = FluRNNEncoder(checkpoint_path="/srv/scratch/z5397970/v2_rnn/flu_rnn_model.pt", input_size=1, hidden_size=64, num_layers=2, num_states=60, embed_dim=8, bidirectional=True, dropout=0.2)
+checkpoint = torch.load("/srv/scratch/z5397970/v2_rnn/flu_rnn_model.pt", weights_only=False)
+encode_mean = checkpoint["data_mean"]
+encode_std = checkpoint["data_std"]
+state_to_idx = checkpoint["state_to_idx"]
+
+def fetch_current_cases(state: str) -> str:
+    """Fetch latest flu case numbers for a state"""
+    today = date.today()
+    state_id = get_state(state)
+    cases = get_fortnight_surv(state_id, today)[0]
+    fomatted = f"Current case numers: {cases}"
+    return formatted
+
+def fetch_past_cases(state: str) -> str:
+    """Fetch case numbers from two and four weeks ago for a state"""
+    today = date.today()
+    four_weeks_ago = today - timedelta(days=29)
+    two_weeks_ago = today - timedelta(days=15)
+    state_id = get_state(state)
+    four_weeks = get_fortnight_surv(state_id, four_weeks_ago)[0]
+    two_weeks = get_fortnight_surv(state_id, two_weeks_ago)[0]
+    fomatted = f"Two weeks ago cases were: {two_weeks} \n Four weeks ago cases were: {four_weeks}"
+    return formatted
+
+def fetch_state_demographics(state: str) -> str:
+    """Fetch population, median wage, and median age of a state"""
+    state_id = get_state(state)
+    demo = get_state_demo(state_id)[0]
+    fomatted = f"Demographic Data:\nPopulation: {demo[0]}\nMedian age: {demo[1]}\nMedian yearly salary: {demo[2]}"
+    return formatted
+
+def fetch_vaccinated_percent(state: str) -> str:
+    """Fetch the percentage of people who have been vaccinated in a state"""
+    today = date.today()
+    state_id = get_state(state)
+    vacc_perc = get_vaccination(state_id, today)
+    formatted = f"Percentage vaccinated: {vacc_perc}"
+    return formatted
+
+def fetch_google_trends(state: str) -> str:
+    """Fetch the current Google Trends search volumn for the state"""
+    today = date.today()
+    state_id = get_state(state)
+    trend = get_trend(state_id, today)[0]
+    formatted = f"Google Trends Search Frequency: {trend}"
+    return formatted
+
+def fetch_arima_forecast(state: str) -> str:
+    """Calculate the ARIMA case number prediction"""
+    today = date.today()
+    state_id = get_state(state)
+    start = datetime.strptime(today, "%Y-%m-%d")
+    sarima_output = sarima_forecast(state_id, date)
+    formatted = f"Two-week ARIMA Case Prediction: {sarima_output}"
+    return formatted
+
+def fetch_lstm_forecast(state: str) -> str:
+    """Calculate the LSTM case number prediction"""
+    today = date.today()
+    state_id = get_state(state)
+    window_start = today - timedelta(days=(30*14))
+    window = get_many_surv(state_id, window_start, start)
+    window = np.log1p(window)
+    window = ((window - encode_mean) / encode_std)
+    sid = torch.tensor([state_to_idx[state_id]], dtype=torch.long)
+    values = window.to_numpy()
+    seq = torch.tensor(values, dtype=torch.float32).unsqueeze(0)
+    seq = seq.view(1, -1)
+    with torch.no_grad():
+        prediction, embedding = encoder.encode(seq,sid)
+        prediction = prediction.squeeze(0).numpy()
+        prediction = round(np.expm1(prediction * encode_std + encode_mean), 2)
+        embedding = embedding.squeeze(0).numpy()
+    formatted = f"Two-week LSTM Case Prediction: {prediction}"
+    return fromatted
+
+def fetch_rnn_embeddings(state: str) -> str:
+    """Return RNN embeddings as a string wrapped in <RNN> tags"""
+    today = date.today()
+    state_id = get_state(state)
+    window_start = today - timedelta(days=(30*14))
+    window = get_many_surv(state_id, window_start, start)
+    window = np.log1p(window)
+    window = ((window - encode_mean) / encode_std)
+    sid = torch.tensor([state_to_idx[state_id]], dtype=torch.long)
+    values = window.to_numpy()
+    seq = torch.tensor(values, dtype=torch.float32).unsqueeze(0)
+    seq = seq.view(1, -1)
+    with torch.no_grad():
+        prediction, embedding = encoder.encode(seq,sid)
+        prediction = prediction.squeeze(0).numpy()
+        prediction = round(np.expm1(prediction * encode_std + encode_mean), 2)
+        embedding = embedding.squeeze(0).numpy()
+    rnn_embed = np.array(np.fromstring(sample["embedding"].strip("[]"),sep=" "), dtype=np.float32)
+    str_tokens = [f"{x:.4f}" for x in rnn_embed]
+    return "<RNN> " + " ".join(str_tokens) + "</RNN>\n"
+
+def fetch_post_percent(state: str) -> str:
+    """Fetch pecentage of reddit posts made in the region that relate to the flu"""
+    today = date.today()
+    state_id = get_state(state)
+    flu_post_percent = get_post_perc(region_id, start)
+    if flu_post_percent == None:
+        posts = gather_posts(country, region_id, date)
+        flu_post_percent = classify_flu_posts(posts)
+        flu_post_percent = round(flu_post_percent, 3)
+        add_post_perc(region_id, start, flu_post_percent)
+    else:
+        flu_post_percent = flu_post_percent[0]
+
+    formatted = f"{flu_post_percent}% of posts relate to influenza infection"
+    return formatted

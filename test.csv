@@ -1,0 +1,449 @@
+prompt,generated,expected
+"SYSTEM: You are a flu forecasting model. User will provide you information about a state and current flu cases and you will generate forecasts based on the provided information.
+USER: Given <USER_QUERY>, generate a case number prediction, and predict the trend for cases over the next two weeks from the following options: Substantial Increase, Increase, Stable, Decrease, Substantial Decrease.
+
+<USER_QUERY>
+Currently case numbers are 5
+Case numbers last fortnight ago were 3
+Case number four weeks ago were 9
+Predictions indicate that over the next two weeks cases will increase to 5
+Google trends shows that flu-related terms are being searched for at a low frequency
+This state has a population of 6196156, a median age of 39.3, and a median yearly salary of 37595
+Current reddit activity shows 1.478% of posts in the region related to influenza infection.
+</USER_QUERY>
+
+ASSISTANT: ","[{'generated_text': 'SYSTEM: You are a flu forecasting model. User will provide you information about a state and current flu cases and you will generate forecasts based on the provided information.\nUSER: Given <USER_QUERY>, generate a case number prediction, and predict the trend for cases over the next two weeks from the following options: Substantial Increase, Increase, Stable, Decrease, Substantial Decrease.\n\n<USER_QUERY>\nCurrently case numbers are 5\nCase numbers last fortnight ago were 3\nCase number four weeks ago were 9\nPredictions indicate that over the next two weeks cases will increase to 5\nGoogle trends shows that flu-related terms are being searched for at a low frequency\nThis state has a population of 6196156, a median age of 39.3, and a median yearly salary of 37595\nCurrent reddit activity shows 1.478% of posts in the region related to influenza infection.\n</USER_QUERY>\n\nASSISTANT: Predicted cases: 4, Trend: Stable'}]","Predicted cases: 4, Trend: Stable"
+"SYSTEM: You are a flu forecasting model. User will provide you information about a state and current flu cases and you will generate forecasts based on the provided information.
+USER: Given <USER_QUERY>, generate a case number prediction, and predict the trend for cases over the next two weeks from the following options: Substantial Increase, Increase, Stable, Decrease, Substantial Decrease.
+
+<USER_QUERY>
+Currently case numbers are 0
+Case numbers last fortnight ago were 4
+Case number four weeks ago were 0
+Predictions indicate that over the next two weeks cases will decline to 0
+Google trends shows that flu-related terms are being searched for at a low frequency
+This state has a population of 262200, a median age of 33.0, and a median yearly salary of 48672
+Current reddit activity shows 0.0% of posts in the region related to influenza infection.
+</USER_QUERY>
+
+ASSISTANT: ","[{'generated_text': 'SYSTEM: You are a flu forecasting model. User will provide you information about a state and current flu cases and you will generate forecasts based on the provided information.\nUSER: Given <USER_QUERY>, generate a case number prediction, and predict the trend for cases over the next two weeks from the following options: Substantial Increase, Increase, Stable, Decrease, Substantial Decrease.\n\n<USER_QUERY>\nCurrently case numbers are 0\nCase numbers last fortnight ago were 4\nCase number four weeks ago were 0\nPredictions indicate that over the next two weeks cases will decline to 0\nGoogle trends shows that flu-related terms are being searched for at a low frequency\nThis state has a population of 262200, a median age of 33.0, and a median yearly salary of 48672\nCurrent reddit activity shows 0.0% of posts in the region related to influenza infection.\n</USER_QUERY>\n\nASSISTANT: Predicted cases: 0, Trend: Stable'}]","Predicted cases: 0, Trend: Stable"
+"SYSTEM: You are a flu forecasting model. User will provide you information about a state and current flu cases and you will generate forecasts based on the provided information.
+USER: Given <USER_QUERY>, generate a case number prediction, and predict the trend for cases over the next two weeks from the following options: Substantial Increase, Increase, Stable, Decrease, Substantial Decrease.
+
+<USER_QUERY>
+Currently case numbers are 309
+Case numbers last fortnight ago were 341
+Case number four weeks ago were 341
+Predictions indicate that over the next two weeks cases will decline to 129
+Google trends shows that flu-related terms are being searched for at a moderate frequency
+This state has a population of 38965193, a median age of 38.2, and a median yearly salary of 41958
+Current reddit activity shows 2.0% of posts in the region related to influenza infection.
+</USER_QUERY>
+
+ASSISTANT: ","[{'generated_text': 'SYSTEM: You are a flu forecasting model. User will provide you information about a state and current flu cases and you will generate forecasts based on the provided information.\nUSER: Given <USER_QUERY>, generate a case number prediction, and predict the trend for cases over the next two weeks from the following options: Substantial Increase, Increase, Stable, Decrease, Substantial Decrease.\n\n<USER_QUERY>\nCurrently case numbers are 309\nCase numbers last fortnight ago were 341\nCase number four weeks ago were 341\nPredictions indicate that over the next two weeks cases will decline to 129\nGoogle trends shows that flu-related terms are being searched for at a moderate frequency\nThis state has a population of 38965193, a median age of 38.2, and a median yearly salary of 41958\nCurrent reddit activity shows 2.0% of posts in the region related to influenza infection.\n</USER_QUERY>\n\nASSISTANT: Predicted cases: 455, Trend: Increase'}]","Predicted cases: 288, Trend: Stable"
+"SYSTEM: You are a flu forecasting model. User will provide you information about a state and current flu cases and you will generate forecasts based on the provided information.
+USER: Given <USER_QUERY>, generate a case number prediction, and predict the trend for cases over the next two weeks from the following options: Substantial Increase, Increase, Stable, Decrease, Substantial Decrease.
+
+<USER_QUERY>
+Currently case numbers are 12
+Case numbers last fortnight ago were 4
+Case number four weeks ago were 13
+Predictions indicate that over the next two weeks cases will increase to 32
+Google trends shows that flu-related terms are being searched for at a low frequency
+This state has a population of 1891700, a median age of 41.0, and a median yearly salary of 38168
+Current reddit activity shows 1.639% of posts in the region related to influenza infection.
+</USER_QUERY>
+
+ASSISTANT: ","[{'generated_text': 'SYSTEM: You are a flu forecasting model. User will provide you information about a state and current flu cases and you will generate forecasts based on the provided information.\nUSER: Given <USER_QUERY>, generate a case number prediction, and predict the trend for cases over the next two weeks from the following options: Substantial Increase, Increase, Stable, Decrease, Substantial Decrease.\n\n<USER_QUERY>\nCurrently case numbers are 12\nCase numbers last fortnight ago were 4\nCase number four weeks ago were 13\nPredictions indicate that over the next two weeks cases will increase to 32\nGoogle trends shows that flu-related terms are being searched for at a low frequency\nThis state has a population of 1891700, a median age of 41.0, and a median yearly salary of 38168\nCurrent reddit activity shows 1.639% of posts in the region related to influenza infection.\n</USER_QUERY>\n\nASSISTANT: Predicted cases: 13, Trend: Stable'}]","Predicted cases: 6, Trend: Decrease"
+"SYSTEM: You are a flu forecasting model. User will provide you information about a state and current flu cases and you will generate forecasts based on the provided information.
+USER: Given <USER_QUERY>, generate a case number prediction, and predict the trend for cases over the next two weeks from the following options: Substantial Increase, Increase, Stable, Decrease, Substantial Decrease.
+
+<USER_QUERY>
+Currently case numbers are 1937
+Case numbers last fortnight ago were 968
+Case number four weeks ago were 289
+Predictions indicate that over the next two weeks cases will increase to 2963
+Google trends shows that flu-related terms are being searched for at a moderate frequency
+This state has a population of 1978379, a median age of 37.4, and a median yearly salary of 40694
+Current reddit activity shows 2.586% of posts in the region related to influenza infection.
+</USER_QUERY>
+
+ASSISTANT: ","[{'generated_text': 'SYSTEM: You are a flu forecasting model. User will provide you information about a state and current flu cases and you will generate forecasts based on the provided information.\nUSER: Given <USER_QUERY>, generate a case number prediction, and predict the trend for cases over the next two weeks from the following options: Substantial Increase, Increase, Stable, Decrease, Substantial Decrease.\n\n<USER_QUERY>\nCurrently case numbers are 1937\nCase numbers last fortnight ago were 968\nCase number four weeks ago were 289\nPredictions indicate that over the next two weeks cases will increase to 2963\nGoogle trends shows that flu-related terms are being searched for at a moderate frequency\nThis state has a population of 1978379, a median age of 37.4, and a median yearly salary of 40694\nCurrent reddit activity shows 2.586% of posts in the region related to influenza infection.\n</USER_QUERY>\n\nASSISTANT: Predicted cases: 3041, Trend: Substantial Increase'}]","Predicted cases: 3340, Trend: Substantial Increase"
+"SYSTEM: You are a flu forecasting model. User will provide you information about a state and current flu cases and you will generate forecasts based on the provided information.
+USER: Given <USER_QUERY>, generate a case number prediction, and predict the trend for cases over the next two weeks from the following options: Substantial Increase, Increase, Stable, Decrease, Substantial Decrease.
+
+<USER_QUERY>
+Currently case numbers are 25
+Case numbers last fortnight ago were 16
+Case number four weeks ago were 11
+Predictions indicate that over the next two weeks cases will increase to 20
+Google trends shows that flu-related terms are being searched for at a very high frequency
+This state has a population of 7126489, a median age of 39.1, and a median yearly salary of 36689
+Current reddit activity shows 0.0% of posts in the region related to influenza infection.
+</USER_QUERY>
+
+ASSISTANT: ","[{'generated_text': 'SYSTEM: You are a flu forecasting model. User will provide you information about a state and current flu cases and you will generate forecasts based on the provided information.\nUSER: Given <USER_QUERY>, generate a case number prediction, and predict the trend for cases over the next two weeks from the following options: Substantial Increase, Increase, Stable, Decrease, Substantial Decrease.\n\n<USER_QUERY>\nCurrently case numbers are 25\nCase numbers last fortnight ago were 16\nCase number four weeks ago were 11\nPredictions indicate that over the next two weeks cases will increase to 20\nGoogle trends shows that flu-related terms are being searched for at a very high frequency\nThis state has a population of 7126489, a median age of 39.1, and a median yearly salary of 36689\nCurrent reddit activity shows 0.0% of posts in the region related to influenza infection.\n</USER_QUERY>\n\nASSISTANT: Predicted cases: 25, Trend: Stable'}]","Predicted cases: 16, Trend: Stable"
+"SYSTEM: You are a flu forecasting model. User will provide you information about a state and current flu cases and you will generate forecasts based on the provided information.
+USER: Given <USER_QUERY>, generate a case number prediction, and predict the trend for cases over the next two weeks from the following options: Substantial Increase, Increase, Stable, Decrease, Substantial Decrease.
+
+<USER_QUERY>
+Currently case numbers are 12
+Case numbers last fortnight ago were 7
+Case number four weeks ago were 4
+Predictions indicate that over the next two weeks cases will increase to 12
+Google trends shows that flu-related terms are being searched for at a low frequency
+This state has a population of 7126489, a median age of 39.1, and a median yearly salary of 36689
+Current reddit activity shows 0.0% of posts in the region related to influenza infection.
+</USER_QUERY>
+
+ASSISTANT: ","[{'generated_text': 'SYSTEM: You are a flu forecasting model. User will provide you information about a state and current flu cases and you will generate forecasts based on the provided information.\nUSER: Given <USER_QUERY>, generate a case number prediction, and predict the trend for cases over the next two weeks from the following options: Substantial Increase, Increase, Stable, Decrease, Substantial Decrease.\n\n<USER_QUERY>\nCurrently case numbers are 12\nCase numbers last fortnight ago were 7\nCase number four weeks ago were 4\nPredictions indicate that over the next two weeks cases will increase to 12\nGoogle trends shows that flu-related terms are being searched for at a low frequency\nThis state has a population of 7126489, a median age of 39.1, and a median yearly salary of 36689\nCurrent reddit activity shows 0.0% of posts in the region related to influenza infection.\n</USER_QUERY>\n\nASSISTANT: Predicted cases: 14, Trend: Stable'}]","Predicted cases: 26, Trend: Stable"
+"SYSTEM: You are a flu forecasting model. User will provide you information about a state and current flu cases and you will generate forecasts based on the provided information.
+USER: Given <USER_QUERY>, generate a case number prediction, and predict the trend for cases over the next two weeks from the following options: Substantial Increase, Increase, Stable, Decrease, Substantial Decrease.
+
+<USER_QUERY>
+Currently case numbers are 2
+Case numbers last fortnight ago were 4
+Case number four weeks ago were 1
+Predictions indicate that over the next two weeks cases will decline to 1
+Google trends shows that flu-related terms are being searched for at a low frequency
+This state has a population of 783926, a median age of 36.3, and a median yearly salary of 42297
+Current reddit activity shows 1.432% of posts in the region related to influenza infection.
+</USER_QUERY>
+
+ASSISTANT: ","[{'generated_text': 'SYSTEM: You are a flu forecasting model. User will provide you information about a state and current flu cases and you will generate forecasts based on the provided information.\nUSER: Given <USER_QUERY>, generate a case number prediction, and predict the trend for cases over the next two weeks from the following options: Substantial Increase, Increase, Stable, Decrease, Substantial Decrease.\n\n<USER_QUERY>\nCurrently case numbers are 2\nCase numbers last fortnight ago were 4\nCase number four weeks ago were 1\nPredictions indicate that over the next two weeks cases will decline to 1\nGoogle trends shows that flu-related terms are being searched for at a low frequency\nThis state has a population of 783926, a median age of 36.3, and a median yearly salary of 42297\nCurrent reddit activity shows 1.432% of posts in the region related to influenza infection.\n</USER_QUERY>\n\nASSISTANT: Predicted cases: 0, Trend: Stable'}]","Predicted cases: 12, Trend: Increase"
+"SYSTEM: You are a flu forecasting model. User will provide you information about a state and current flu cases and you will generate forecasts based on the provided information.
+USER: Given <USER_QUERY>, generate a case number prediction, and predict the trend for cases over the next two weeks from the following options: Substantial Increase, Increase, Stable, Decrease, Substantial Decrease.
+
+<USER_QUERY>
+Currently case numbers are 22
+Case numbers last fortnight ago were 13
+Case number four weeks ago were 5
+Predictions indicate that over the next two weeks cases will decline to 0
+Google trends shows that flu-related terms are being searched for at a low frequency
+This state has a population of 19571216, a median age of 40.2, and a median yearly salary of 42128
+Current reddit activity shows 0.0% of posts in the region related to influenza infection.
+</USER_QUERY>
+
+ASSISTANT: ","[{'generated_text': 'SYSTEM: You are a flu forecasting model. User will provide you information about a state and current flu cases and you will generate forecasts based on the provided information.\nUSER: Given <USER_QUERY>, generate a case number prediction, and predict the trend for cases over the next two weeks from the following options: Substantial Increase, Increase, Stable, Decrease, Substantial Decrease.\n\n<USER_QUERY>\nCurrently case numbers are 22\nCase numbers last fortnight ago were 13\nCase number four weeks ago were 5\nPredictions indicate that over the next two weeks cases will decline to 0\nGoogle trends shows that flu-related terms are being searched for at a low frequency\nThis state has a population of 19571216, a median age of 40.2, and a median yearly salary of 42128\nCurrent reddit activity shows 0.0% of posts in the region related to influenza infection.\n</USER_QUERY>\n\nASSISTANT: Predicted cases: 36, Trend: Stable'}]","Predicted cases: 14, Trend: Stable"
+"SYSTEM: You are a flu forecasting model. User will provide you information about a state and current flu cases and you will generate forecasts based on the provided information.
+USER: Given <USER_QUERY>, generate a case number prediction, and predict the trend for cases over the next two weeks from the following options: Substantial Increase, Increase, Stable, Decrease, Substantial Decrease.
+
+<USER_QUERY>
+Currently case numbers are 0
+Case numbers last fortnight ago were 0
+Case number four weeks ago were 0
+Predictions indicate that over the next two weeks cases will remain at 0
+Google trends shows that flu-related terms are being searched for at a low frequency
+This state has a population of 1978379, a median age of 37.4, and a median yearly salary of 40694
+Current reddit activity shows 1.205% of posts in the region related to influenza infection.
+</USER_QUERY>
+
+ASSISTANT: ","[{'generated_text': 'SYSTEM: You are a flu forecasting model. User will provide you information about a state and current flu cases and you will generate forecasts based on the provided information.\nUSER: Given <USER_QUERY>, generate a case number prediction, and predict the trend for cases over the next two weeks from the following options: Substantial Increase, Increase, Stable, Decrease, Substantial Decrease.\n\n<USER_QUERY>\nCurrently case numbers are 0\nCase numbers last fortnight ago were 0\nCase number four weeks ago were 0\nPredictions indicate that over the next two weeks cases will remain at 0\nGoogle trends shows that flu-related terms are being searched for at a low frequency\nThis state has a population of 1978379, a median age of 37.4, and a median yearly salary of 40694\nCurrent reddit activity shows 1.205% of posts in the region related to influenza infection.\n</USER_QUERY>\n\nASSISTANT: Predicted cases: 0, Trend: Stable'}]","Predicted cases: 3, Trend: Stable"
+"SYSTEM: You are a flu forecasting model. User will provide you information about a state and current flu cases and you will generate forecasts based on the provided information.
+USER: Given <USER_QUERY>, generate a case number prediction, and predict the trend for cases over the next two weeks from the following options: Substantial Increase, Increase, Stable, Decrease, Substantial Decrease.
+
+<USER_QUERY>
+Currently case numbers are 7
+Case numbers last fortnight ago were 3
+Case number four weeks ago were 4
+Predictions indicate that over the next two weeks cases will increase to 32
+Google trends shows that flu-related terms are being searched for at a low frequency
+This state has a population of 11785935, a median age of 39.9, and a median yearly salary of 37886
+Current reddit activity shows 0.0% of posts in the region related to influenza infection.
+</USER_QUERY>
+
+ASSISTANT: ","[{'generated_text': 'SYSTEM: You are a flu forecasting model. User will provide you information about a state and current flu cases and you will generate forecasts based on the provided information.\nUSER: Given <USER_QUERY>, generate a case number prediction, and predict the trend for cases over the next two weeks from the following options: Substantial Increase, Increase, Stable, Decrease, Substantial Decrease.\n\n<USER_QUERY>\nCurrently case numbers are 7\nCase numbers last fortnight ago were 3\nCase number four weeks ago were 4\nPredictions indicate that over the next two weeks cases will increase to 32\nGoogle trends shows that flu-related terms are being searched for at a low frequency\nThis state has a population of 11785935, a median age of 39.9, and a median yearly salary of 37886\nCurrent reddit activity shows 0.0% of posts in the region related to influenza infection.\n</USER_QUERY>\n\nASSISTANT: Predicted cases: 10, Trend: Stable'}]","Predicted cases: 7, Trend: Stable"
+"SYSTEM: You are a flu forecasting model. User will provide you information about a state and current flu cases and you will generate forecasts based on the provided information.
+USER: Given <USER_QUERY>, generate a case number prediction, and predict the trend for cases over the next two weeks from the following options: Substantial Increase, Increase, Stable, Decrease, Substantial Decrease.
+
+<USER_QUERY>
+Currently case numbers are 0
+Case numbers last fortnight ago were 0
+Case number four weeks ago were 0
+Predictions indicate that over the next two weeks cases will remain at 0
+Google trends shows that flu-related terms are being searched for at a low frequency
+This state has a population of 3194176, a median age of 39.4, and a median yearly salary of 39353
+Current reddit activity shows 0.714% of posts in the region related to influenza infection.
+</USER_QUERY>
+
+ASSISTANT: ","[{'generated_text': 'SYSTEM: You are a flu forecasting model. User will provide you information about a state and current flu cases and you will generate forecasts based on the provided information.\nUSER: Given <USER_QUERY>, generate a case number prediction, and predict the trend for cases over the next two weeks from the following options: Substantial Increase, Increase, Stable, Decrease, Substantial Decrease.\n\n<USER_QUERY>\nCurrently case numbers are 0\nCase numbers last fortnight ago were 0\nCase number four weeks ago were 0\nPredictions indicate that over the next two weeks cases will remain at 0\nGoogle trends shows that flu-related terms are being searched for at a low frequency\nThis state has a population of 3194176, a median age of 39.4, and a median yearly salary of 39353\nCurrent reddit activity shows 0.714% of posts in the region related to influenza infection.\n</USER_QUERY>\n\nASSISTANT: Predicted cases: 1, Trend: Stable'}]","Predicted cases: 0, Trend: Stable"
+"SYSTEM: You are a flu forecasting model. User will provide you information about a state and current flu cases and you will generate forecasts based on the provided information.
+USER: Given <USER_QUERY>, generate a case number prediction, and predict the trend for cases over the next two weeks from the following options: Substantial Increase, Increase, Stable, Decrease, Substantial Decrease.
+
+<USER_QUERY>
+Currently case numbers are 0
+Case numbers last fortnight ago were 0
+Case number four weeks ago were 0
+Predictions indicate that over the next two weeks cases will remain at 0
+Google trends shows that flu-related terms are being searched for at a low frequency
+This state has a population of 1095962, a median age of 40.8, and a median yearly salary of 42715
+Current reddit activity shows 1.058% of posts in the region related to influenza infection.
+</USER_QUERY>
+
+ASSISTANT: ","[{'generated_text': 'SYSTEM: You are a flu forecasting model. User will provide you information about a state and current flu cases and you will generate forecasts based on the provided information.\nUSER: Given <USER_QUERY>, generate a case number prediction, and predict the trend for cases over the next two weeks from the following options: Substantial Increase, Increase, Stable, Decrease, Substantial Decrease.\n\n<USER_QUERY>\nCurrently case numbers are 0\nCase numbers last fortnight ago were 0\nCase number four weeks ago were 0\nPredictions indicate that over the next two weeks cases will remain at 0\nGoogle trends shows that flu-related terms are being searched for at a low frequency\nThis state has a population of 1095962, a median age of 40.8, and a median yearly salary of 42715\nCurrent reddit activity shows 1.058% of posts in the region related to influenza infection.\n</USER_QUERY>\n\nASSISTANT: Predicted cases: 0, Trend: Stable'}]","Predicted cases: 0, Trend: Stable"
+"SYSTEM: You are a flu forecasting model. User will provide you information about a state and current flu cases and you will generate forecasts based on the provided information.
+USER: Given <USER_QUERY>, generate a case number prediction, and predict the trend for cases over the next two weeks from the following options: Substantial Increase, Increase, Stable, Decrease, Substantial Decrease.
+
+<USER_QUERY>
+Currently case numbers are 0
+Case numbers last fortnight ago were 0
+Case number four weeks ago were 0
+Predictions indicate that over the next two weeks cases will remain at 0
+Google trends shows that flu-related terms are being searched for at a low frequency
+This state has a population of 1031890, a median age of 42.0, and a median yearly salary of 40640
+Current reddit activity shows 2.667% of posts in the region related to influenza infection.
+</USER_QUERY>
+
+ASSISTANT: ","[{'generated_text': 'SYSTEM: You are a flu forecasting model. User will provide you information about a state and current flu cases and you will generate forecasts based on the provided information.\nUSER: Given <USER_QUERY>, generate a case number prediction, and predict the trend for cases over the next two weeks from the following options: Substantial Increase, Increase, Stable, Decrease, Substantial Decrease.\n\n<USER_QUERY>\nCurrently case numbers are 0\nCase numbers last fortnight ago were 0\nCase number four weeks ago were 0\nPredictions indicate that over the next two weeks cases will remain at 0\nGoogle trends shows that flu-related terms are being searched for at a low frequency\nThis state has a population of 1031890, a median age of 42.0, and a median yearly salary of 40640\nCurrent reddit activity shows 2.667% of posts in the region related to influenza infection.\n</USER_QUERY>\n\nASSISTANT: Predicted cases: 0, Trend: Stable'}]","Predicted cases: 0, Trend: Stable"
+"SYSTEM: You are a flu forecasting model. User will provide you information about a state and current flu cases and you will generate forecasts based on the provided information.
+USER: Given <USER_QUERY>, generate a case number prediction, and predict the trend for cases over the next two weeks from the following options: Substantial Increase, Increase, Stable, Decrease, Substantial Decrease.
+
+<USER_QUERY>
+Currently case numbers are 721
+Case numbers last fortnight ago were 923
+Case number four weeks ago were 561
+Predictions indicate that over the next two weeks cases will decline to 447
+Google trends shows that flu-related terms are being searched for at a high frequency
+This state has a population of 575800, a median age of 42.0, and a median yearly salary of 36452
+Current reddit activity shows 1.724% of posts in the region related to influenza infection.
+</USER_QUERY>
+
+ASSISTANT: ","[{'generated_text': 'SYSTEM: You are a flu forecasting model. User will provide you information about a state and current flu cases and you will generate forecasts based on the provided information.\nUSER: Given <USER_QUERY>, generate a case number prediction, and predict the trend for cases over the next two weeks from the following options: Substantial Increase, Increase, Stable, Decrease, Substantial Decrease.\n\n<USER_QUERY>\nCurrently case numbers are 721\nCase numbers last fortnight ago were 923\nCase number four weeks ago were 561\nPredictions indicate that over the next two weeks cases will decline to 447\nGoogle trends shows that flu-related terms are being searched for at a high frequency\nThis state has a population of 575800, a median age of 42.0, and a median yearly salary of 36452\nCurrent reddit activity shows 1.724% of posts in the region related to influenza infection.\n</USER_QUERY>\n\nASSISTANT: Predicted cases: 654, Trend: Substantial Decrease'}]","Predicted cases: 204, Trend: Substantial Decrease"
+"SYSTEM: You are a flu forecasting model. User will provide you information about a state and current flu cases and you will generate forecasts based on the provided information.
+USER: Given <USER_QUERY>, generate a case number prediction, and predict the trend for cases over the next two weeks from the following options: Substantial Increase, Increase, Stable, Decrease, Substantial Decrease.
+
+<USER_QUERY>
+Currently case numbers are 1
+Case numbers last fortnight ago were 0
+Case number four weeks ago were 2
+Predictions indicate that over the next two weeks cases will increase to 2
+Google trends shows that flu-related terms are being searched for at a low frequency
+This state has a population of 5373555, a median age of 40.5, and a median yearly salary of 36110
+Current reddit activity shows 0.0% of posts in the region related to influenza infection.
+</USER_QUERY>
+
+ASSISTANT: ","[{'generated_text': 'SYSTEM: You are a flu forecasting model. User will provide you information about a state and current flu cases and you will generate forecasts based on the provided information.\nUSER: Given <USER_QUERY>, generate a case number prediction, and predict the trend for cases over the next two weeks from the following options: Substantial Increase, Increase, Stable, Decrease, Substantial Decrease.\n\n<USER_QUERY>\nCurrently case numbers are 1\nCase numbers last fortnight ago were 0\nCase number four weeks ago were 2\nPredictions indicate that over the next two weeks cases will increase to 2\nGoogle trends shows that flu-related terms are being searched for at a low frequency\nThis state has a population of 5373555, a median age of 40.5, and a median yearly salary of 36110\nCurrent reddit activity shows 0.0% of posts in the region related to influenza infection.\n</USER_QUERY>\n\nASSISTANT: Predicted cases: 1, Trend: Stable'}]","Predicted cases: 1, Trend: Stable"
+"SYSTEM: You are a flu forecasting model. User will provide you information about a state and current flu cases and you will generate forecasts based on the provided information.
+USER: Given <USER_QUERY>, generate a case number prediction, and predict the trend for cases over the next two weeks from the following options: Substantial Increase, Increase, Stable, Decrease, Substantial Decrease.
+
+<USER_QUERY>
+Currently case numbers are 461
+Case numbers last fortnight ago were 141
+Case number four weeks ago were 64
+Predictions indicate that over the next two weeks cases will increase to 701
+Google trends shows that flu-related terms are being searched for at a low frequency
+This state has a population of 7001399, a median age of 40.3, and a median yearly salary of 48376
+Current reddit activity shows 2.516% of posts in the region related to influenza infection.
+</USER_QUERY>
+
+ASSISTANT: ","[{'generated_text': 'SYSTEM: You are a flu forecasting model. User will provide you information about a state and current flu cases and you will generate forecasts based on the provided information.\nUSER: Given <USER_QUERY>, generate a case number prediction, and predict the trend for cases over the next two weeks from the following options: Substantial Increase, Increase, Stable, Decrease, Substantial Decrease.\n\n<USER_QUERY>\nCurrently case numbers are 461\nCase numbers last fortnight ago were 141\nCase number four weeks ago were 64\nPredictions indicate that over the next two weeks cases will increase to 701\nGoogle trends shows that flu-related terms are being searched for at a low frequency\nThis state has a population of 7001399, a median age of 40.3, and a median yearly salary of 48376\nCurrent reddit activity shows 2.516% of posts in the region related to influenza infection.\n</USER_QUERY>\n\nASSISTANT: Predicted cases: 1000, Trend: Substantial Increase'}]","Predicted cases: 423, Trend: Decrease"
+"SYSTEM: You are a flu forecasting model. User will provide you information about a state and current flu cases and you will generate forecasts based on the provided information.
+USER: Given <USER_QUERY>, generate a case number prediction, and predict the trend for cases over the next two weeks from the following options: Substantial Increase, Increase, Stable, Decrease, Substantial Decrease.
+
+<USER_QUERY>
+Currently case numbers are 3
+Case numbers last fortnight ago were 0
+Case number four weeks ago were 0
+Predictions indicate that over the next two weeks cases will increase to 2
+Google trends shows that flu-related terms are being searched for at a low frequency
+This state has a population of 584057, a median age of 39.3, and a median yearly salary of 39427
+Current reddit activity shows 1.199% of posts in the region related to influenza infection.
+</USER_QUERY>
+
+ASSISTANT: ","[{'generated_text': 'SYSTEM: You are a flu forecasting model. User will provide you information about a state and current flu cases and you will generate forecasts based on the provided information.\nUSER: Given <USER_QUERY>, generate a case number prediction, and predict the trend for cases over the next two weeks from the following options: Substantial Increase, Increase, Stable, Decrease, Substantial Decrease.\n\n<USER_QUERY>\nCurrently case numbers are 3\nCase numbers last fortnight ago were 0\nCase number four weeks ago were 0\nPredictions indicate that over the next two weeks cases will increase to 2\nGoogle trends shows that flu-related terms are being searched for at a low frequency\nThis state has a population of 584057, a median age of 39.3, and a median yearly salary of 39427\nCurrent reddit activity shows 1.199% of posts in the region related to influenza infection.\n</USER_QUERY>\n\nASSISTANT: Predicted cases: 0, Trend: Decrease'}]","Predicted cases: 10, Trend: Increase"
+"SYSTEM: You are a flu forecasting model. User will provide you information about a state and current flu cases and you will generate forecasts based on the provided information.
+USER: Given <USER_QUERY>, generate a case number prediction, and predict the trend for cases over the next two weeks from the following options: Substantial Increase, Increase, Stable, Decrease, Substantial Decrease.
+
+<USER_QUERY>
+Currently case numbers are 241
+Case numbers last fortnight ago were 149
+Case number four weeks ago were 113
+Predictions indicate that over the next two weeks cases will increase to 301
+Google trends shows that flu-related terms are being searched for at a low frequency
+This state has a population of 5877610, a median age of 37.9, and a median yearly salary of 48517
+Current reddit activity shows 1.005% of posts in the region related to influenza infection.
+</USER_QUERY>
+
+ASSISTANT: ","[{'generated_text': 'SYSTEM: You are a flu forecasting model. User will provide you information about a state and current flu cases and you will generate forecasts based on the provided information.\nUSER: Given <USER_QUERY>, generate a case number prediction, and predict the trend for cases over the next two weeks from the following options: Substantial Increase, Increase, Stable, Decrease, Substantial Decrease.\n\n<USER_QUERY>\nCurrently case numbers are 241\nCase numbers last fortnight ago were 149\nCase number four weeks ago were 113\nPredictions indicate that over the next two weeks cases will increase to 301\nGoogle trends shows that flu-related terms are being searched for at a low frequency\nThis state has a population of 5877610, a median age of 37.9, and a median yearly salary of 48517\nCurrent reddit activity shows 1.005% of posts in the region related to influenza infection.\n</USER_QUERY>\n\nASSISTANT: Predicted cases: 238, Trend: Stable'}]","Predicted cases: 303, Trend: Increase"
+"SYSTEM: You are a flu forecasting model. User will provide you information about a state and current flu cases and you will generate forecasts based on the provided information.
+USER: Given <USER_QUERY>, generate a case number prediction, and predict the trend for cases over the next two weeks from the following options: Substantial Increase, Increase, Stable, Decrease, Substantial Decrease.
+
+<USER_QUERY>
+Currently case numbers are 5202
+Case numbers last fortnight ago were 2330
+Case number four weeks ago were 1869
+Predictions indicate that over the next two weeks cases will increase to 6843
+Google trends shows that flu-related terms are being searched for at a high frequency
+This state has a population of 8545100, a median age of 39.0, and a median yearly salary of 42276
+Current reddit activity shows 0.259% of posts in the region related to influenza infection.
+</USER_QUERY>
+
+ASSISTANT: ","[{'generated_text': 'SYSTEM: You are a flu forecasting model. User will provide you information about a state and current flu cases and you will generate forecasts based on the provided information.\nUSER: Given <USER_QUERY>, generate a case number prediction, and predict the trend for cases over the next two weeks from the following options: Substantial Increase, Increase, Stable, Decrease, Substantial Decrease.\n\n<USER_QUERY>\nCurrently case numbers are 5202\nCase numbers last fortnight ago were 2330\nCase number four weeks ago were 1869\nPredictions indicate that over the next two weeks cases will increase to 6843\nGoogle trends shows that flu-related terms are being searched for at a high frequency\nThis state has a population of 8545100, a median age of 39.0, and a median yearly salary of 42276\nCurrent reddit activity shows 0.259% of posts in the region related to influenza infection.\n</USER_QUERY>\n\nASSISTANT: Predicted cases: 10160, Trend: Substantial Increase'}]","Predicted cases: 8837, Trend: Substantial Increase"
+"SYSTEM: You are a flu forecasting model. User will provide you information about a state and current flu cases and you will generate forecasts based on the provided information.
+USER: Given <USER_QUERY>, generate a case number prediction, and predict the trend for cases over the next two weeks from the following options: Substantial Increase, Increase, Stable, Decrease, Substantial Decrease.
+
+<USER_QUERY>
+Currently case numbers are 267
+Case numbers last fortnight ago were 50
+Case number four weeks ago were 9
+Predictions indicate that over the next two weeks cases will increase to 360
+Google trends shows that flu-related terms are being searched for at a moderate frequency
+This state has a population of 647464, a median age of 43.7, and a median yearly salary of 42335
+Current reddit activity shows 1.554% of posts in the region related to influenza infection.
+</USER_QUERY>
+
+ASSISTANT: ","[{'generated_text': 'SYSTEM: You are a flu forecasting model. User will provide you information about a state and current flu cases and you will generate forecasts based on the provided information.\nUSER: Given <USER_QUERY>, generate a case number prediction, and predict the trend for cases over the next two weeks from the following options: Substantial Increase, Increase, Stable, Decrease, Substantial Decrease.\n\n<USER_QUERY>\nCurrently case numbers are 267\nCase numbers last fortnight ago were 50\nCase number four weeks ago were 9\nPredictions indicate that over the next two weeks cases will increase to 360\nGoogle trends shows that flu-related terms are being searched for at a moderate frequency\nThis state has a population of 647464, a median age of 43.7, and a median yearly salary of 42335\nCurrent reddit activity shows 1.554% of posts in the region related to influenza infection.\n</USER_QUERY>\n\nASSISTANT: Predicted cases: 649, Trend: Substantial Increase'}]","Predicted cases: 599, Trend: Substantial Increase"
+"SYSTEM: You are a flu forecasting model. User will provide you information about a state and current flu cases and you will generate forecasts based on the provided information.
+USER: Given <USER_QUERY>, generate a case number prediction, and predict the trend for cases over the next two weeks from the following options: Substantial Increase, Increase, Stable, Decrease, Substantial Decrease.
+
+<USER_QUERY>
+Currently case numbers are 1897
+Case numbers last fortnight ago were 229
+Case number four weeks ago were 67
+Predictions indicate that over the next two weeks cases will increase to 3010
+Google trends shows that flu-related terms are being searched for at a moderate frequency
+This state has a population of 4233358, a median age of 40.7, and a median yearly salary of 40706
+Current reddit activity shows 0.885% of posts in the region related to influenza infection.
+</USER_QUERY>
+
+ASSISTANT: ","[{'generated_text': 'SYSTEM: You are a flu forecasting model. User will provide you information about a state and current flu cases and you will generate forecasts based on the provided information.\nUSER: Given <USER_QUERY>, generate a case number prediction, and predict the trend for cases over the next two weeks from the following options: Substantial Increase, Increase, Stable, Decrease, Substantial Decrease.\n\n<USER_QUERY>\nCurrently case numbers are 1897\nCase numbers last fortnight ago were 229\nCase number four weeks ago were 67\nPredictions indicate that over the next two weeks cases will increase to 3010\nGoogle trends shows that flu-related terms are being searched for at a moderate frequency\nThis state has a population of 4233358, a median age of 40.7, and a median yearly salary of 40706\nCurrent reddit activity shows 0.885% of posts in the region related to influenza infection.\n</USER_QUERY>\n\nASSISTANT: Predicted cases: 2208, Trend: Increase'}]","Predicted cases: 2398, Trend: Substantial Increase"
+"SYSTEM: You are a flu forecasting model. User will provide you information about a state and current flu cases and you will generate forecasts based on the provided information.
+USER: Given <USER_QUERY>, generate a case number prediction, and predict the trend for cases over the next two weeks from the following options: Substantial Increase, Increase, Stable, Decrease, Substantial Decrease.
+
+<USER_QUERY>
+Currently case numbers are 174
+Case numbers last fortnight ago were 168
+Case number four weeks ago were 101
+Predictions indicate that over the next two weeks cases will decline to 156
+Google trends shows that flu-related terms are being searched for at a low frequency
+This state has a population of 22610726, a median age of 42.8, and a median yearly salary of 37160
+Current reddit activity shows 0.0% of posts in the region related to influenza infection.
+</USER_QUERY>
+
+ASSISTANT: ","[{'generated_text': 'SYSTEM: You are a flu forecasting model. User will provide you information about a state and current flu cases and you will generate forecasts based on the provided information.\nUSER: Given <USER_QUERY>, generate a case number prediction, and predict the trend for cases over the next two weeks from the following options: Substantial Increase, Increase, Stable, Decrease, Substantial Decrease.\n\n<USER_QUERY>\nCurrently case numbers are 174\nCase numbers last fortnight ago were 168\nCase number four weeks ago were 101\nPredictions indicate that over the next two weeks cases will decline to 156\nGoogle trends shows that flu-related terms are being searched for at a low frequency\nThis state has a population of 22610726, a median age of 42.8, and a median yearly salary of 37160\nCurrent reddit activity shows 0.0% of posts in the region related to influenza infection.\n</USER_QUERY>\n\nASSISTANT: Predicted cases: 138, Trend: Decrease'}]","Predicted cases: 125, Trend: Decrease"
+"SYSTEM: You are a flu forecasting model. User will provide you information about a state and current flu cases and you will generate forecasts based on the provided information.
+USER: Given <USER_QUERY>, generate a case number prediction, and predict the trend for cases over the next two weeks from the following options: Substantial Increase, Increase, Stable, Decrease, Substantial Decrease.
+
+<USER_QUERY>
+Currently case numbers are 0
+Case numbers last fortnight ago were 0
+Case number four weeks ago were 1
+Predictions indicate that over the next two weeks cases will remain at 0
+Google trends shows that flu-related terms are being searched for at a low frequency
+This state has a population of 3617176, a median age of 41.5, and a median yearly salary of 45517
+Current reddit activity shows 0.613% of posts in the region related to influenza infection.
+</USER_QUERY>
+
+ASSISTANT: ","[{'generated_text': 'SYSTEM: You are a flu forecasting model. User will provide you information about a state and current flu cases and you will generate forecasts based on the provided information.\nUSER: Given <USER_QUERY>, generate a case number prediction, and predict the trend for cases over the next two weeks from the following options: Substantial Increase, Increase, Stable, Decrease, Substantial Decrease.\n\n<USER_QUERY>\nCurrently case numbers are 0\nCase numbers last fortnight ago were 0\nCase number four weeks ago were 1\nPredictions indicate that over the next two weeks cases will remain at 0\nGoogle trends shows that flu-related terms are being searched for at a low frequency\nThis state has a population of 3617176, a median age of 41.5, and a median yearly salary of 45517\nCurrent reddit activity shows 0.613% of posts in the region related to influenza infection.\n</USER_QUERY>\n\nASSISTANT: Predicted cases: 0, Trend: Stable'}]","Predicted cases: 0, Trend: Stable"
+"SYSTEM: You are a flu forecasting model. User will provide you information about a state and current flu cases and you will generate forecasts based on the provided information.
+USER: Given <USER_QUERY>, generate a case number prediction, and predict the trend for cases over the next two weeks from the following options: Substantial Increase, Increase, Stable, Decrease, Substantial Decrease.
+
+<USER_QUERY>
+Currently case numbers are 0
+Case numbers last fortnight ago were 2
+Case number four weeks ago were 3
+Predictions indicate that over the next two weeks cases will decline to 0
+Google trends shows that flu-related terms are being searched for at a low frequency
+This state has a population of 647464, a median age of 43.7, and a median yearly salary of 42335
+Current reddit activity shows 1.026% of posts in the region related to influenza infection.
+</USER_QUERY>
+
+ASSISTANT: ","[{'generated_text': 'SYSTEM: You are a flu forecasting model. User will provide you information about a state and current flu cases and you will generate forecasts based on the provided information.\nUSER: Given <USER_QUERY>, generate a case number prediction, and predict the trend for cases over the next two weeks from the following options: Substantial Increase, Increase, Stable, Decrease, Substantial Decrease.\n\n<USER_QUERY>\nCurrently case numbers are 0\nCase numbers last fortnight ago were 2\nCase number four weeks ago were 3\nPredictions indicate that over the next two weeks cases will decline to 0\nGoogle trends shows that flu-related terms are being searched for at a low frequency\nThis state has a population of 647464, a median age of 43.7, and a median yearly salary of 42335\nCurrent reddit activity shows 1.026% of posts in the region related to influenza infection.\n</USER_QUERY>\n\nASSISTANT: Predicted cases: 0, Trend: Stable'}]","Predicted cases: 0, Trend: Stable"
+"SYSTEM: You are a flu forecasting model. User will provide you information about a state and current flu cases and you will generate forecasts based on the provided information.
+USER: Given <USER_QUERY>, generate a case number prediction, and predict the trend for cases over the next two weeks from the following options: Substantial Increase, Increase, Stable, Decrease, Substantial Decrease.
+
+<USER_QUERY>
+Currently case numbers are 0
+Case numbers last fortnight ago were 0
+Case number four weeks ago were 0
+Predictions indicate that over the next two weeks cases will remain at 0
+Google trends shows that flu-related terms are being searched for at a low frequency
+This state has a population of 3194176, a median age of 39.4, and a median yearly salary of 39353
+Current reddit activity shows 1.339% of posts in the region related to influenza infection.
+</USER_QUERY>
+
+ASSISTANT: ","[{'generated_text': 'SYSTEM: You are a flu forecasting model. User will provide you information about a state and current flu cases and you will generate forecasts based on the provided information.\nUSER: Given <USER_QUERY>, generate a case number prediction, and predict the trend for cases over the next two weeks from the following options: Substantial Increase, Increase, Stable, Decrease, Substantial Decrease.\n\n<USER_QUERY>\nCurrently case numbers are 0\nCase numbers last fortnight ago were 0\nCase number four weeks ago were 0\nPredictions indicate that over the next two weeks cases will remain at 0\nGoogle trends shows that flu-related terms are being searched for at a low frequency\nThis state has a population of 3194176, a median age of 39.4, and a median yearly salary of 39353\nCurrent reddit activity shows 1.339% of posts in the region related to influenza infection.\n</USER_QUERY>\n\nASSISTANT: Predicted cases: 0, Trend: Stable'}]","Predicted cases: 0, Trend: Stable"
+"SYSTEM: You are a flu forecasting model. User will provide you information about a state and current flu cases and you will generate forecasts based on the provided information.
+USER: Given <USER_QUERY>, generate a case number prediction, and predict the trend for cases over the next two weeks from the following options: Substantial Increase, Increase, Stable, Decrease, Substantial Decrease.
+
+<USER_QUERY>
+Currently case numbers are 13
+Case numbers last fortnight ago were 12
+Case number four weeks ago were 13
+Predictions indicate that over the next two weeks cases will increase to 13
+Google trends shows that flu-related terms are being searched for at a low frequency
+This state has a population of 8715698, a median age of 39.3, and a median yearly salary of 44734
+Current reddit activity shows 0.459% of posts in the region related to influenza infection.
+</USER_QUERY>
+
+ASSISTANT: ","[{'generated_text': 'SYSTEM: You are a flu forecasting model. User will provide you information about a state and current flu cases and you will generate forecasts based on the provided information.\nUSER: Given <USER_QUERY>, generate a case number prediction, and predict the trend for cases over the next two weeks from the following options: Substantial Increase, Increase, Stable, Decrease, Substantial Decrease.\n\n<USER_QUERY>\nCurrently case numbers are 13\nCase numbers last fortnight ago were 12\nCase number four weeks ago were 13\nPredictions indicate that over the next two weeks cases will increase to 13\nGoogle trends shows that flu-related terms are being searched for at a low frequency\nThis state has a population of 8715698, a median age of 39.3, and a median yearly salary of 44734\nCurrent reddit activity shows 0.459% of posts in the region related to influenza infection.\n</USER_QUERY>\n\nASSISTANT: Predicted cases: 42, Trend: Increase'}]","Predicted cases: 8, Trend: Stable"
+"SYSTEM: You are a flu forecasting model. User will provide you information about a state and current flu cases and you will generate forecasts based on the provided information.
+USER: Given <USER_QUERY>, generate a case number prediction, and predict the trend for cases over the next two weeks from the following options: Substantial Increase, Increase, Stable, Decrease, Substantial Decrease.
+
+<USER_QUERY>
+Currently case numbers are 88
+Case numbers last fortnight ago were 206
+Case number four weeks ago were 319
+Predictions indicate that over the next two weeks cases will decline to 43
+Google trends shows that flu-related terms are being searched for at a low frequency
+This state has a population of 5877610, a median age of 37.9, and a median yearly salary of 48517
+Current reddit activity shows 0.0% of posts in the region related to influenza infection.
+</USER_QUERY>
+
+ASSISTANT: ","[{'generated_text': 'SYSTEM: You are a flu forecasting model. User will provide you information about a state and current flu cases and you will generate forecasts based on the provided information.\nUSER: Given <USER_QUERY>, generate a case number prediction, and predict the trend for cases over the next two weeks from the following options: Substantial Increase, Increase, Stable, Decrease, Substantial Decrease.\n\n<USER_QUERY>\nCurrently case numbers are 88\nCase numbers last fortnight ago were 206\nCase number four weeks ago were 319\nPredictions indicate that over the next two weeks cases will decline to 43\nGoogle trends shows that flu-related terms are being searched for at a low frequency\nThis state has a population of 5877610, a median age of 37.9, and a median yearly salary of 48517\nCurrent reddit activity shows 0.0% of posts in the region related to influenza infection.\n</USER_QUERY>\n\nASSISTANT: Predicted cases: 20, Trend: Decrease'}]","Predicted cases: 64, Trend: Decrease"
+"SYSTEM: You are a flu forecasting model. User will provide you information about a state and current flu cases and you will generate forecasts based on the provided information.
+USER: Given <USER_QUERY>, generate a case number prediction, and predict the trend for cases over the next two weeks from the following options: Substantial Increase, Increase, Stable, Decrease, Substantial Decrease.
+
+<USER_QUERY>
+Currently case numbers are 0
+Case numbers last fortnight ago were 0
+Case number four weeks ago were 0
+Predictions indicate that over the next two weeks cases will remain at 0
+Google trends shows that flu-related terms are being searched for at a low frequency
+This state has a population of 7126489, a median age of 39.1, and a median yearly salary of 36689
+Current reddit activity shows 0.84% of posts in the region related to influenza infection.
+</USER_QUERY>
+
+ASSISTANT: ","[{'generated_text': 'SYSTEM: You are a flu forecasting model. User will provide you information about a state and current flu cases and you will generate forecasts based on the provided information.\nUSER: Given <USER_QUERY>, generate a case number prediction, and predict the trend for cases over the next two weeks from the following options: Substantial Increase, Increase, Stable, Decrease, Substantial Decrease.\n\n<USER_QUERY>\nCurrently case numbers are 0\nCase numbers last fortnight ago were 0\nCase number four weeks ago were 0\nPredictions indicate that over the next two weeks cases will remain at 0\nGoogle trends shows that flu-related terms are being searched for at a low frequency\nThis state has a population of 7126489, a median age of 39.1, and a median yearly salary of 36689\nCurrent reddit activity shows 0.84% of posts in the region related to influenza infection.\n</USER_QUERY>\n\nASSISTANT: Predicted cases: 0, Trend: Stable'}]","Predicted cases: 0, Trend: Stable"
+"SYSTEM: You are a flu forecasting model. User will provide you information about a state and current flu cases and you will generate forecasts based on the provided information.
+USER: Given <USER_QUERY>, generate a case number prediction, and predict the trend for cases over the next two weeks from the following options: Substantial Increase, Increase, Stable, Decrease, Substantial Decrease.
+
+<USER_QUERY>
+Currently case numbers are 504
+Case numbers last fortnight ago were 624
+Case number four weeks ago were 688
+Predictions indicate that over the next two weeks cases will decline to 455
+Google trends shows that flu-related terms are being searched for at a low frequency
+This state has a population of 3207004, a median age of 39.1, and a median yearly salary of 39441
+Current reddit activity shows 0.568% of posts in the region related to influenza infection.
+</USER_QUERY>
+
+ASSISTANT: ","[{'generated_text': 'SYSTEM: You are a flu forecasting model. User will provide you information about a state and current flu cases and you will generate forecasts based on the provided information.\nUSER: Given <USER_QUERY>, generate a case number prediction, and predict the trend for cases over the next two weeks from the following options: Substantial Increase, Increase, Stable, Decrease, Substantial Decrease.\n\n<USER_QUERY>\nCurrently case numbers are 504\nCase numbers last fortnight ago were 624\nCase number four weeks ago were 688\nPredictions indicate that over the next two weeks cases will decline to 455\nGoogle trends shows that flu-related terms are being searched for at a low frequency\nThis state has a population of 3207004, a median age of 39.1, and a median yearly salary of 39441\nCurrent reddit activity shows 0.568% of posts in the region related to influenza infection.\n</USER_QUERY>\n\nASSISTANT: Predicted cases: 401, Trend: Decrease'}]","Predicted cases: 251, Trend: Decrease"
+"SYSTEM: You are a flu forecasting model. User will provide you information about a state and current flu cases and you will generate forecasts based on the provided information.
+USER: Given <USER_QUERY>, generate a case number prediction, and predict the trend for cases over the next two weeks from the following options: Substantial Increase, Increase, Stable, Decrease, Substantial Decrease.
+
+<USER_QUERY>
+Currently case numbers are 0
+Case numbers last fortnight ago were 0
+Case number four weeks ago were 0
+Predictions indicate that over the next two weeks cases will remain at 0
+Google trends shows that flu-related terms are being searched for at a low frequency
+This state has a population of 10835491, a median age of 39.4, and a median yearly salary of 37780
+Current reddit activity shows 1.258% of posts in the region related to influenza infection.
+</USER_QUERY>
+
+ASSISTANT: ","[{'generated_text': 'SYSTEM: You are a flu forecasting model. User will provide you information about a state and current flu cases and you will generate forecasts based on the provided information.\nUSER: Given <USER_QUERY>, generate a case number prediction, and predict the trend for cases over the next two weeks from the following options: Substantial Increase, Increase, Stable, Decrease, Substantial Decrease.\n\n<USER_QUERY>\nCurrently case numbers are 0\nCase numbers last fortnight ago were 0\nCase number four weeks ago were 0\nPredictions indicate that over the next two weeks cases will remain at 0\nGoogle trends shows that flu-related terms are being searched for at a low frequency\nThis state has a population of 10835491, a median age of 39.4, and a median yearly salary of 37780\nCurrent reddit activity shows 1.258% of posts in the region related to influenza infection.\n</USER_QUERY>\n\nASSISTANT: Predicted cases: 0, Trend: Stable'}]","Predicted cases: 0, Trend: Stable"
+"SYSTEM: You are a flu forecasting model. User will provide you information about a state and current flu cases and you will generate forecasts based on the provided information.
+USER: Given <USER_QUERY>, generate a case number prediction, and predict the trend for cases over the next two weeks from the following options: Substantial Increase, Increase, Stable, Decrease, Substantial Decrease.
+
+<USER_QUERY>
+Currently case numbers are 0
+Case numbers last fortnight ago were 1
+Case number four weeks ago were 5
+Predictions indicate that over the next two weeks cases will decline to 0
+Google trends shows that flu-related terms are being searched for at a low frequency
+This state has a population of 1435138, a median age of 41.4, and a median yearly salary of 41998
+Current reddit activity shows 1.22% of posts in the region related to influenza infection.
+</USER_QUERY>
+
+ASSISTANT: ","[{'generated_text': 'SYSTEM: You are a flu forecasting model. User will provide you information about a state and current flu cases and you will generate forecasts based on the provided information.\nUSER: Given <USER_QUERY>, generate a case number prediction, and predict the trend for cases over the next two weeks from the following options: Substantial Increase, Increase, Stable, Decrease, Substantial Decrease.\n\n<USER_QUERY>\nCurrently case numbers are 0\nCase numbers last fortnight ago were 1\nCase number four weeks ago were 5\nPredictions indicate that over the next two weeks cases will decline to 0\nGoogle trends shows that flu-related terms are being searched for at a low frequency\nThis state has a population of 1435138, a median age of 41.4, and a median yearly salary of 41998\nCurrent reddit activity shows 1.22% of posts in the region related to influenza infection.\n</USER_QUERY>\n\nASSISTANT: Predicted cases: 0, Trend: Stable'}]","Predicted cases: 3, Trend: Increase"

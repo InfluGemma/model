@@ -1,0 +1,104 @@
+import torch
+from langchain.llm.base import LLM
+from typing import Optional, List
+from langchain.agents import initialize_agent, AgentType
+from langchain.memory import ConversationBufferMemory
+from langchain.prompts import PromptTemplate
+from transformers import AutoTokenizer, AutoModelForCausalLM
+from huggingface_hub import login
+from peft import PeftModel
+from tools import tools
+
+class InfluGemma(LLM):
+    def __init__(self, model, tokenizer, device="cuda"):
+        self.model = model.to(device)
+        self.tokenizer = tokenizer
+        self.device = device
+    @property
+    def _llm_type(self) -> str:
+        return "influgemma_forecast"
+
+    def _call(self, prompt: str, stop: Optional[List[str]] = None) -> str:
+        inputs = self.tokenizer(prompt, return_tensors="pt").to(self.device)
+        outputs = self.model.generate(
+            **inputs,
+            max_new_tokens=256,
+            do_sample=False,
+            )
+        decoded = self.tokenizer.decode(output[0], skip_special_tokens=True)
+        if stop:
+            for s in stop:
+                if s in decoded:
+                    decoded = decoded.split(s)[0]
+        return decoded
+
+model_id = "google/gemma-3-1b-pt"
+model_class = AutoModelForCausalLM
+model_path = "/srv/scratch/z5397970/influgemma_v2"
+tokenizer = AutoTokenizer.from_pretrained(model_path)
+base_model = model_class.from_pretrained(model_id, **model_kwargs)
+base_model.resize_token_embeddings(len(tokenizer))
+base_model = base_model.to(torch.float32)
+model = PeftModel.from_pretrained(base_model, model_path)
+
+
+model.config.use_cache = True
+model.gradient_checkpointing_disable()
+
+llm = InfluGemma(model, tokenizer, device="cuda")
+
+react_prompt = PromptTemplate(
+    input_variables=["input", "chat_history"]
+    template="""
+You are a helpful flu forecasting agent. Use the tools provided to gather information and reason step by step.
+
+Previous reasoning:
+{chat_history}
+
+Current task:
+{input}
+
+Format each reasoning step like this:
+
+Thought: <your reasoning>
+Action: <tool name to call or 'Finish'>
+Action Input: <input to the tool>
+Observation: <result from tool>
+
+{agent_scratchpad}
+"""    
+
+memory = ConversationBufferMemory(
+    memory_key="chat_history",
+    return_messages=True,
+    )
+
+agent = initialize_agent(
+    tools=tools,
+    llm=llm,
+    agent=AgentType.ZERO_SHOT_REACT_DESCRIPTION,
+    verbose=True,
+    memory=memory,
+    max_iterations=5,
+    agent_kwargs={
+        "perfix": react_prompt.template
+    },
+    )
+
+def agent_predict_multistep(state: str):
+    prompt = """You are a helpful flu forecasting model. Your goal is to forecast flu cases in {state} and predict the trend for cases over the next two weeks from the following options: Substantial Increase, Increase, Stable, Decrease, Substantial Decrease.
+
+You have access to the following tools:
+1. Get Current Flu Cases
+2. Get State Demographic Data
+3. Get Vaccination Percent
+4. Get Google Trends
+5. Get ARIMA Forecast
+6. Get LSTM Forecast
+7. Get RNN Embeddings
+8. Get Reddit Post Percent
+
+Use step-by-step reasoning. You can call tool iteratively and refine your predictions.
+"""
+    return agent.run(prompt)
+
